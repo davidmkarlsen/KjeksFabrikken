@@ -1,0 +1,55 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Kontakt oss";
+}
+
+
+<h2>Kontakt oss</h2>
+<p>Send en beskjed, så vil vi kontakte deg så fort som mulig.</p>
+<div class="container d-flex" style="gap: 2rem">
+    <div class="col-8">
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Email</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="navn@eksempel.com">
+                <div class="row mt-3">
+                    <div class="col">
+                        <label for="firstNameInput">Fornavn</label>
+                        <input type="text" class="form-control" id="firstNameInput" placeholder="Fornavn">
+                    </div>
+                    <div class="col">
+                        <label for="lastNameInput">Etternavn</label>
+                        <input type="text" class="form-control" id="lastNameInput" placeholder="Etternavn">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group mt-3">
+                <label for="exampleFormControlTextarea1">Skriv melding her</label>
+                <textarea class="form-control" id="messageInput" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary mt-4">Send</button>
+        </form>
+    </div>
+    <div class="col">
+        <div class="card w-100">
+            <div class="card-header">
+                Addresse
+            </div>
+            <address class="px-3 py-2">
+                Kjeksfabrikken AS<br/>
+                Dronningens gate 34, 0154 Oslo<br/>
+                Norge
+            </address>
+        </div>
+        <div class="card w-100 mt-4">
+            <div class="card-header">
+                Åpningstider
+            </div>
+            <address class="px-3 py-2">
+                Man - Lør<br/>
+                kl 08:00 - kl 16:00<br/>
+                Stengt søndager og helligdager
+            </address>
+        </div>
+    </div>
+</div>

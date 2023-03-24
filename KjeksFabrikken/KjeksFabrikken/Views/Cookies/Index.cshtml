@@ -1,0 +1,27 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<Cookie>
+@{
+    ViewData["Title"] = "Våre kjeks";
+}
+<div class="container-fluid">
+    <h2>Våre kjeks</h2>
+    <div class="row align-items-center">
+        @foreach (var cookie in Model)
+        {
+            <div class="col-4">
+                <div class="card d-flex flex-row w-100 px-4 py-2 align-items-center mt-4">
+                    <div class="card-img-top rounded" style="width: 6rem; height: 6rem;">
+                        <img class="rounded" style="width: 6rem; height: 6rem; object-fit: cover" src="images/@cookie.ImgUrl" alt="@cookie.Name">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@cookie.Name</h5>
+                        <a class="btn btn-primary" asp-area="" asp-controller="CookieDetails" asp-route-id="@cookie.Id" asp-action="Index">
+                            Se mer
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    
+</div>

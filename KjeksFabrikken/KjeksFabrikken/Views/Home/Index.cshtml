@@ -1,0 +1,58 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Hjemmeside";
+}
+
+<div class="container d-flex" style="gap: 2rem">
+    <div class="col-8">
+        <div class="h-25 rounded" style="overflow: hidden;">
+            <img class="w-100" style="object-position: 0 -5rem" src="/images/cookiesPicture.jpg" alt="kjeksfabrikken_kjeks">
+        </div>
+        <h1 class="mt-3">
+            Dette er Kjeksfabrikken.
+        </h1>
+        <p class="lead">
+            Velkommen til "Kjeksfabrikken", et bakeri som er stolt av å produsere de diggeste og nærmest uimotståelige kjeksene på markedet. Vi befinner oss midt i hjertet av en sjarmerende by, omgitt av grønne åser og en frodig natur. <br/>
+            Vi bruker kun de høyeste kvalitetsingrediensene for å skape vårt brede utvalg av kjeks, som varierer fra klassiske sjokoladekjeks til unike og oppfinnsomme smaker. Hos Kjeksfabrikken tror vi at hver bit av våre kjeks skal være et øyeblikk av ren glede, og vi streber etter å gjøre det til virkelighet med hver batch vi baker.
+        </p>
+    </div>
+    <div class="col">
+        <div class="card w-100">
+            <div class="card-header">
+                Populære kjeks
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <a class="nav-link" asp-area="" asp-controller="CookieDetails" asp-route-id="2" asp-action="Index">
+                        Bærlykke <span class="badge" style="background-color: #bebebe; padding: 0.5em; margin-left: 0.5em;">Nyhet</span>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a class="nav-link" asp-area="" asp-controller="CookieDetails" asp-route-id="7" asp-action="Index">
+                        Karamellknas
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a class="nav-link" asp-area="" asp-controller="CookieDetails" asp-route-id="3" asp-action="Index">
+                        Sitrondrøm <span class="badge" style="background-color: #bebebe; padding: 0.5em; margin-left: 0.5em;">Nyhet</span>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a class="nav-link" asp-area="" asp-controller="CookieDetails" asp-route-id="9" asp-action="Index">
+                        Kokosmakron
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="card w-100 mt-4">
+            <div class="card-header">
+                Addresse
+            </div>
+            <address class="px-3 py-2">
+                Kjeksfabrikken AS<br/>
+                Dronningens gate 34, 0154 Oslo<br/>
+                Norge
+            </address>
+        </div>
+    </div>
+</div>

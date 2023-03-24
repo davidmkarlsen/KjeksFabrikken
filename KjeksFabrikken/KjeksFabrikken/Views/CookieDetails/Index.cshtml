@@ -1,0 +1,46 @@
+﻿@model Cookie
+@{
+    ViewData["Title"] = "Våre kjeks";
+}
+
+<a class="btn primary" href="javascript:history.back()">
+    Tilbake
+</a>
+<div class="card d-flex flex-row px-4 py-2 w-75 mt-4">
+    <img class="rounded" style="margin-left: -1rem; width: 13rem; height: 28rem; object-fit: cover" src="/images/@Model.ImgUrl" alt="@Model.ImgUrl">
+    <div class="card-body">
+        <h3 class="card-title">
+            <h2>@Model.Name</h2>
+        </h3>
+        <div class="card-text d-flex flex-column mt-3">
+            <div class="col">
+                <h4>
+                    Kategorier
+                </h4>
+                <div>
+                    @foreach (var ingredient in Model.CookieCategories)
+                    {
+                        <span style="margin-right: 0.5rem">
+                            <span class="badge badge-primary" style="background-color: #F3F4F6; color: #232f5e">
+                            @ingredient.Category.Name
+                            </span>
+                        </span>
+                    }
+                </div>  
+            </div>
+            <div class="col mt-3">
+                <h4>
+                    Ingridienser
+                </h4>
+                <ul>
+                    @foreach (var ingredient in Model.CookieIngredients)
+                    {
+                        <li>
+                            @ingredient.Ingredient.Name
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
